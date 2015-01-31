@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* FONTS */
+@import url(http://fonts.googleapis.com/css?family=Roboto:900,500,400italic,400);
+
+@font-face {
+  font-family:  "socicon";
+  src:  font-url("socicon/socicon-webfont.eot");
+  src:  font-url("socicon/socicon-webfont.eot?#iefix") format("embedded-opentype"),
+    font-url("socicon/socicon-webfont.woff") format("woff"),
+    font-url("socicon/socicon-webfont.ttf") format("truetype"),
+    font-url("socicon/socicon-webfont.svg#sociconregular") format("svg");
+  font-weight:  normal;
+  font-style:   normal
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #000000;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+.socicon {
+  margin:0 10px;
+  font-size: 1.5em;
+  font-family: 'socicon' !important;
+}
+
+.glyphicon-envelope {
+  margin:0 10px;
+  font-size: 1.5em;
+}
+
+/* LOGO */
+.logo {
+  margin-top: 40px;
+}
+
+/* NAVIGATION */
+.navigation {
+  margin-top: 90px;
+}
+
+.centered-pills {  
+  text-align: center
+}
+.centered-pills ul.nav-pills {
+  display: inline-block
+}
+.centered-pills li {
+  display: inline
+}
+.centered-pills a {
+  float: left
+}
+* html .centered-pills ul.nav-pills, *+html .centered-pills ul.nav-pills {
+  display: inline
+}
+
+/*
+.nav-pills > li.active > a, .nav-pills > li > a:hover, .nav-pills > li.active > a:focus {
+  background-color: #fdb813;
+}
+*/
+
+/* CONTENT */
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+    width: 300px;
+}
+
+// FOOTER
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  
+  font-size: 0.8em;
+  text-align:center;
+  vertical-align:middle;
+  line-height:45px;
+  background-color: #fdb813;
+}
