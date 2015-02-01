@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.6'
+gem 'protected_attributes'
 
 gem 'sqlite3'
 
@@ -10,7 +11,6 @@ gem 'sass-rails', '~> 4.0.3'
 
 # Restores depricated features on mail_to
 gem 'actionview-encoded_mail_to', '~> 1.0.5'
-
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
@@ -42,13 +42,7 @@ group :assets do
   gem 'uglifier', '>= 1.3.0'
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
 gem 'jquery-rails'
+
+# Cause why not?
+gem 'yahoo_weather'

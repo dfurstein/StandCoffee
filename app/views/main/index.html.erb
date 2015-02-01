@@ -1,54 +1,24 @@
-<div class="container">
-  <div class="logo">
-    <div class="row text-center">
-      <%= image_tag("stand_coffee_logo.png", alt: "Stand Coffee Logo") %>
-    </div>
-  </div>
-  <div class="navigation">
-    <div class="row tabbable centered-pills">  
-      <ul class="nav nav-pills">
-        <!-- <li class="active"><a href="#home" data-toggle="tab">Home</a></li> -->
-        <li><a href="#about" data-toggle="tab">About</a></li>
-        <li><a href="#locations" data-toggle="tab">Locations</a></li>
-        <li><a href="#coffee" data-toggle="tab">Coffee</a></li>
-      </ul>
-      <div class="tab-content">
-        <div id="home" class="tab-pane active">
-          <%= render 'photo' %>
-        </div>
-        <div id="about" class="tab-pane">
-          <%= render 'about' %>
-        </div>
-        <div id="locations" class="tab-pane">
-          <%= render 'locations' %>
-        </div>
-        <div id="coffee" class="tab-pane">
-          <%= render 'coffee' %>
-        </div>
+<div class="container navigation">
+  <div class="row tabbable centered-pills">  
+    <ul class="nav nav-pills">
+      <!-- <li class="active"><a href="#home" data-toggle="tab">Home</a></li> -->
+      <li><a href="#about" data-toggle="tab">About</a></li>
+      <li><a href="#locations" data-toggle="tab">Locations</a></li>
+      <li><a href="#coffee" data-toggle="tab">Coffee</a></li>
+    </ul>
+    <div class="tab-content">
+      <div id="home" class="tab-pane active">
+        <%= render 'photo' %>
+      </div>
+      <div id="about" class="tab-pane">
+        <%= render 'about' %>
+      </div>
+      <div id="locations" class="tab-pane">
+        <%= render 'locations' %>
+      </div>
+      <div id="coffee" class="tab-pane">
+        <%= render 'coffee' %>
       </div>
     </div>
   </div>
-</div> 
-
-<div class="footer">
-  <div class="container">
-    <div class="col-sm-4 hidden-xs">
-      NEW YORK, NEW YORK
-    </div>
-    <div class="col-sm-4">
-      <a href="https://www.facebook.com/standcoffeenyc"><span class="socicon">b</span></a> <!-- Facebook -->
-      <a href="https://twitter.com/standcoffee"><span class="socicon">a</span></a> <!-- Twitter -->
-      <a href="http://instagram.com/standcoffee"><span class="socicon">x</span></a> <!-- Instagram -->
-      <!-- <a href="http://standcoffee.tumblr.com/"><span class="socicon">z</span></a> --> <!-- Tumblr -->
-      <span class="visible-xs-inline-block">
-        <a href="mailto:hello@standcoffeenyc.com">
-          <span class="glyphicon glyphicon-envelope"><!-- E-Mail --></span>
-        </a>
-      </span>
-    </div>
-    <div class="col-sm-4 hidden-xs">
-      <%= mail_to "hello@standcoffeenyc.com", "HELLO@STANDCOFFEENYC.COM", encode: "javascript" %>
-    </div>
-  </div>
 </div>
-

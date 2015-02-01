@@ -1,1 +1,14 @@
-Locations
+<div class="row text-center">
+  <hr />
+  <div class="col-xs-6 col-xs-offset-3">
+  <% @locations.each do |location| %>
+    <address>
+      <strong><%= location.neighborhood %></strong><br />
+      <%= location.street %><br />
+      <%= location.city %>, <%= location.state %> <%= location.zipcode %><br />
+      <em><%= location.locale %></em><br />
+      Monday - Sunday 7am - 3pm
+    </address>
+  <% end %>
+	</div>
+</div>
