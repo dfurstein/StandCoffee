@@ -45,4 +45,5 @@ end
 gem 'jquery-rails'
 
 # Cause why not?
-gem 'yahoo_weather'
+#gem 'yahoo_weather'
+gem 'yahoo_weatherman'
