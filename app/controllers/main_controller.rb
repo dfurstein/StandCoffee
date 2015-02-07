@@ -5,7 +5,7 @@ class MainController < ApplicationController
 
     client = Weatherman::Client.new unit: 'F'
     response = client.lookup_by_woeid 2459115
-    @temperature = response.condition['temp']
+    @temperature = response.condition['temp'] unless response.nil?
 
     @locations = Location.where(current: true)
   end

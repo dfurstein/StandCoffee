@@ -4,7 +4,9 @@
       <p class="text-left">
         <small><ins>
           <%= @date %><br />
-          <%= @temperature %>&deg;<br />
+          <% unless @temperature.nil? %>
+            <%= @temperature %>&deg;<br />
+          <% end %>
           NYC
         </ins></small>
       </p>
