@@ -5,7 +5,7 @@ class MainController < ApplicationController
 
     client = YahooWeather::Client.new
     response = client.fetch_by_location('New York')
-    @temperature = response.condition.temp
+    @temperature = response.condition.temp unless response.nil?
 
     @locations = Location.where(current: true)
   end
