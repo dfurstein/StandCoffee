@@ -1,15 +1,13 @@
-<div class="row text-center">
-  <hr />
-  <div class="col-xs-6 col-xs-offset-3">
-  <% @locations.each do |location| %>
-    <address>
-      <strong><%= location.neighborhood %></strong><br />
-      <%= location.street %><br />
-      <%= location.city %>, <%= location.state %> <%= location.zipcode %><br />
-      <em><%= location.locale %></em><br />
-      <%= "Daily 7:00am - 11:30am" if location.id == 1 %>
-      <%= "Daily 7:00am - 3:00pm" if location.id == 2 %>
-    </address>
-  <% end %>
-	</div>
+<hr />
+<div class="col-xs-8 col-xs-offset-2">
+<% @locations.each do |location| %>
+  <address>
+    <strong><%= location.neighborhood %></strong><br />
+    <%= location.street %><br />
+    <%= location.city %>, <%= location.state %> <%= location.zipcode %><br />
+    <em><%= location.locale %></em><br />
+    <%= "Daily 7:00am - 11:30am" if location.id == 1 %>
+  </address>
+<% end %>
 </div>
+
