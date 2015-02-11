@@ -1,8 +1,8 @@
 <hr />
-<div class="col-xs-8 col-xs-offset-2">
+<div class="col-xs-10 col-xs-offset-1">
 <% @locations.each do |location| %>
   <address>
-    <strong><%= location.neighborhood %></strong><br />
+    <strong><%= location.neighborhood.upcase %></strong><br />
     <%= location.street %><br />
     <%= location.city %>, <%= location.state %> <%= location.zipcode %><br />
     <em><%= location.locale %></em><br />
