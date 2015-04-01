@@ -41,7 +41,7 @@ body {
 }
 
 .footer a {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -49,11 +49,13 @@ body {
   margin:0 10px;
   font-size: 1.4em;
   font-family: 'socicon' !important;
+  color: #ffffff;
 }
 
 .glyphicon-envelope {
   margin:0 10px;
   font-size: 1.5em;
+  color: #ffffff;
 }
 
 /* HEADER */
@@ -93,17 +95,23 @@ body {
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
   color: #ffffff;
-  background-color: #fdb813;
+  background-color: #000000;
   border-radius: 0px;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-  color: #000000;
-  background-color: #fee2a0;
+  color: #ffffff;
+  background-color: #b2b2b2;
   border-radius: 0px;
 }
 
 /* CONTENT */
+/*img {
+  filter: gray; 
+  filter: grayscale(1); 
+  -webkit-filter: grayscale(1);
+}*/
+
 hr {
   display: block;
   margin-top: 0.5em;
@@ -145,9 +153,10 @@ body {
   /* Set the fixed height of the footer here */
   height: 40px;
   
+  color: #ffffff;
   font-size: 0.7em;
   text-align:center;
   vertical-align:middle;
   line-height:40px;
-  background-color: #fdb813;
+  background-color: #000000;
 }
