@@ -23,7 +23,7 @@ class Location < ActiveRecord::Base
     location.save
   end
 
-  def self.inactivate(id)
+  def self.deactivate(id)
     location = find(id)
 
     location.current = false

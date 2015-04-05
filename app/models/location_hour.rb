@@ -11,4 +11,10 @@ class LocationHour < ActiveRecord::Base
 
     hours.save
   end
+
+  def self.hours(location_id)
+    where(location_id: location_id).group([:open, :close]).each_with_object({}) do |hours, hash|
+      hash[[hours.open, hours.close]] = where(location_id: location_id, open: hours.open, close: hours.close).pluck(:day_of_week)
+    end.invert
+  end
 end

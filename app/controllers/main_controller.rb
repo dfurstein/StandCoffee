@@ -1,5 +1,6 @@
 # Controller for the main index page
 class MainController < ApplicationController
+  helper LocationHourHelper
   def index
     @date = Date.today.to_formatted_s(:rfc822).upcase
 
