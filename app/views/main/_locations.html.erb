@@ -6,7 +6,7 @@
     <%= location.street %><br />
     <%= location.city %>, <%= location.state %> <%= location.zipcode %><br />
     <em><%= location.locale %></em><br />
-    <% if location.id != 5 %>
+    <% if location.id != 4 %>
     	<%= format_hours(LocationHour.hours(location.id)) %>
     <% else %>
     	<%= link_to "Fesitval Schedule", "http://www.centralpark.com/guide/activities/concerts/summerstage-festival.html", target: "_blank"%>
