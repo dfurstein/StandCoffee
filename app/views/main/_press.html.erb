@@ -1,0 +1,28 @@
+<hr />
+<%= image_tag("press_header.jpg", alt: "Press Header", class: "img-responsive press-header") %>
+
+<% @articles.each_with_index do |article, index| %>
+  <div class="col-sm-4 column-press-<%= index % 3 %> hidden-xs">
+    <a href="<%= article.url %>" target="_blank">
+      <p class="text-left">
+        <strong><%= article.site %></strong><br/>
+        <span>“<%= article.title %>”</span><br/>
+        <em><%= article.published_at.to_formatted_s(:long) %></em>
+      </p>
+    </a>
+  </div>
+  <div class="full-row-press visible-xs">
+    <a href="<%= article.url %>" target="_blank">
+      <p class="text-left">
+        <strong><%= article.site %></strong><br/>
+        <span>“<%= article.title %>”</span><br/>
+        <em><%= article.published_at.to_formatted_s(:long) %></em>
+      </p>
+    </a>
+  </div>
+  <% if (index + 1) % 3 == 0 && @articles.length % 3 != 0%>
+    <div class="col-sm-12 full-row-press hidden-xs">
+      <hr class="full" />
+    </div>
+  <% end %>
+<% end %>

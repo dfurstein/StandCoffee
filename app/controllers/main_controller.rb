@@ -1,7 +1,5 @@
 # Controller for the main index page
 class MainController < ApplicationController
-  respond_to :js, :html
-
   helper LocationHourHelper
   def index
     @date = Date.today.to_formatted_s(:rfc822).upcase
@@ -11,5 +9,7 @@ class MainController < ApplicationController
     @temperature = response.condition['temp'] unless response.nil?
 
     @locations = Location.where(current: true).order(:neighborhood)
+
+    @articles = Article.where(is_active: true).order(published_at: :desc).last(9)
   end
 end
