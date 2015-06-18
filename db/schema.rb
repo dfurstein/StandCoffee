@@ -11,13 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150201062250) do
+ActiveRecord::Schema.define(version: 20150525210103) do
+
+  create_table "articles", primary_key: "twitter_id", force: true do |t|
+    t.string   "site"
+    t.text     "url"
+    t.string   "title"
+    t.text     "photo_url"
+    t.text     "description"
+    t.date     "published_at"
+    t.boolean  "is_active"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "location_hours", force: true do |t|
     t.integer  "location_id", null: false
     t.integer  "day_of_week", null: false
-    t.integer  "open",        null: false
-    t.integer  "close",       null: false
+    t.decimal  "open",        null: false
+    t.decimal  "close",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

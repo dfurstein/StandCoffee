@@ -44,6 +44,8 @@ end
 
 gem 'jquery-rails'
 
-# Cause why not?
-#gem 'yahoo_weather'
 gem 'yahoo_weatherman'
+gem 'twitter', '~> 5.14.0'
+
+gem 'link_thumbnailer'
+gem 'whenever'
