@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 30.minutes do
-  rake 'import:boxscore', output: '/home/StandCoffee/log/cron.log'
+  rake 'import:articles', output: '/home/StandCoffee/log/cron.log'
 end
