@@ -4,7 +4,6 @@
       <!-- <li class="active"><a href="#home" data-toggle="tab">Home</a></li> -->
       <li><%= link_to 'ABOUT', '#about', data: { toggle: 'tab' } %></li>
       <li><%= link_to 'LOCATIONS', '#locations', data: { toggle: 'tab' } %></li>
-      <li><%= link_to 'COFFEE', '#coffee', data: { toggle: 'tab' } %></li>
       <li><%= link_to 'PRESS', '#press', data: { toggle: 'tab' } %></li>
     </ul>
     <div class="tab-content">
@@ -16,9 +15,6 @@
       </div>
       <div id="locations" class="tab-pane">
         <%= render 'locations' %>
-      </div>
-      <div id="coffee" class="tab-pane">
-        <%= render 'coffee' %>
       </div>
       <div id="press" class="tab-pane">
         <%= render 'press' %>

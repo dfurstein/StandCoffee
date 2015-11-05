@@ -2,15 +2,10 @@
 <div class="col-xs-10 col-xs-offset-1">
 <% @locations.each do |location| %>
   <address>
-    <strong><%= location.neighborhood.upcase %></strong><br />
+    <strong><%= location.locale %></strong><br />
     <%= location.street %><br />
     <%= location.city %>, <%= location.state %> <%= location.zipcode %><br />
-    <em><%= location.locale %></em><br />
-    <% if location.id != 4 %>
-    	<%= format_hours(LocationHour.hours(location.id)) %>
-    <% else %>
-    	<%= link_to "Fesitval Schedule", "http://www.centralpark.com/guide/activities/concerts/summerstage-festival.html", target: "_blank"%>
-    <% end %>
+    <%= format_hours(LocationHour.hours(location.id)) %>
   </address>
 <% end %>
 </div>

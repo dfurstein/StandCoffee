@@ -3,10 +3,15 @@ module LocationHourHelper
   def format_hours(hours)
     if hours.keys.count == 1 && hours.keys[0].count == 7
       "Daily, #{format_time(hours.values[0][0])} – #{format_time(hours.values[0][1])}"
+    elsif hours.keys.count == 1 && hours.keys[0] == [0, 6]
+      "Weekends, #{format_time(hours.values[0][0])} – #{format_time(hours.values[0][1])}"
     elsif hours.keys.count == 1 && hours.keys[0].count == 1
       "#{Date::DAYNAMES[hours.keys[0][0]]} #{format_time(hours.values[0][0])} – #{format_time(hours.values[0][1])}"
     elsif hours.keys.count == 1 && consecutive_days?(hours.keys[0].sort)
       "#{Date::DAYNAMES[hours.keys[0].sort.first]} – #{Date::DAYNAMES[hours.keys[0].sort.last]}, #{format_time(hours.values[0][0])} – #{format_time(hours.values[0][1])}"
+    elsif hours.keys.count == 2 && ((consecutive_days?(hours.keys[0].sort) && hours.keys[1] == [0, 6]) ||
+      (consecutive_days?(hours.keys[1].sort) && hours.keys[0] == [0, 6]))
+      "#{Date::DAYNAMES[hours.keys[0].sort.first]} – #{Date::DAYNAMES[hours.keys[0].sort.last]}, #{format_time(hours.values[0][0])} – #{format_time(hours.values[0][1])}<br />Weekends, #{format_time(hours.values[0][0])} – #{format_time(hours.values[0][1])}".html_safe
     end
   end
 
