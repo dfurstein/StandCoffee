@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
-  get '/staff' => redirect(ENV['EXTERNAL_STAFF_URL'])
+  get '/staff' => redirect('https://docs.google.com/document/d/1KCEPdwXhcXdV4MygbDLNrBj1aoj6u1f0dNXAyb7p8n0/pub')
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
