@@ -14,11 +14,12 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 
-$(document).ready(
-  function() {
-    $(".header a").click(function() {
-        $('li.active').removeClass('active');
-    });
-  });
+$(function() {
+  $(".header a").click(function() {
+      $('li.active').removeClass('active');
+  })
+});

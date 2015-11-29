@@ -1,6 +1,9 @@
 class Location < ActiveRecord::Base
   attr_accessible :current, :neighborhood, :street, :city, :state,
-                  :zipcode, :locale
+                  :zipcode, :locale, :latitude, :longitude
+
+  geocoded_by :address
+  after_validation :geocode, if: ->(obj) { obj.address.present? && (obj.street_changed? || obj.city_changed?) }
 
   def self.add_location(neighborhood, street, city, state, zipcode, locale)
     location = Location.new
@@ -29,5 +32,9 @@ class Location < ActiveRecord::Base
     location.current = false
 
     location.save
+  end
+
+  def address
+    [street, city, state].compact.join(', ') + ' ' + zipcode.to_s
   end
 end

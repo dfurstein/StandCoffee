@@ -43,9 +43,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'underscore-rails'
 
 gem 'yahoo_weatherman'
 gem 'twitter', '~> 5.14.0'
+gem 'geocoder'
+gem 'gmaps4rails'
 
 gem 'link_thumbnailer'
 gem 'whenever'

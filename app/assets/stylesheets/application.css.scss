@@ -156,7 +156,7 @@ hr {
   padding: 0 0 20px 0;
 }
 
-// FOOTER
+/* FOOTER */
 html {
   position: relative;
   min-height: 100%;
@@ -180,4 +180,12 @@ body {
   vertical-align:middle;
   line-height:40px;
   background-color: #000000;
+}
+
+/* MAP */
+#map {
+  margin-bottom: 10px;
+  border: black;
+  border-width: 5px;
+  border-style: solid;
 }
