@@ -62,6 +62,8 @@ GEM
       multipart-post (>= 1.2, < 3)
     fastimage (1.7.0)
       addressable (~> 2.3, >= 2.3.5)
+    geocoder (1.2.12)
+    gmaps4rails (2.1.2)
     hike (1.2.3)
     htmlentities (4.3.3)
     http (0.6.4)
@@ -176,6 +178,7 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.8.3)
     unicorn (4.9.0)
       kgio (~> 2.6)
       rack
@@ -199,6 +202,8 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.3.3)
   coffee-rails (~> 4.0.0)
+  geocoder
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   link_thumbnailer
@@ -214,6 +219,7 @@ DEPENDENCIES
   turbolinks
   twitter (~> 5.14.0)
   uglifier (>= 1.3.0)
+  underscore-rails
   unicorn
   whenever
   yahoo_weatherman
