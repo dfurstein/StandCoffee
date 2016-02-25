@@ -12,6 +12,19 @@ module LocationHourHelper
     elsif hours.keys.count == 2 && ((consecutive_days?(hours.keys[0].sort) && hours.keys[1] == [0, 6]) ||
       (consecutive_days?(hours.keys[1].sort) && hours.keys[0] == [0, 6]))
       "#{Date::DAYNAMES[hours.keys[0].sort.first]} – #{Date::DAYNAMES[hours.keys[0].sort.last]}, #{format_time(hours.values[0][0])} – #{format_time(hours.values[0][1])}<br />Weekends, #{format_time(hours.values[1][0])} – #{format_time(hours.values[1][1])}".html_safe
+    elsif hours.keys.count == 3
+      str = ''
+      hours.sort.each do |hour|
+        if hour[0].length == 1
+          str << "#{Date::DAYNAMES[hour[0][0]]} #{format_time(hour[1][0])} – #{format_time(hour[1][1])}"
+        elsif hours.keys[0] == [0, 6]
+          str << "Weekends, #{format_time(hour[1][0])} – #{format_time(hour[1][1])}"
+        elsif consecutive_days?(hours.keys[0].sort)
+          str << "#{Date::DAYNAMES[hour[0].sort.first]} – #{Date::DAYNAMES[hour[0].sort.last]}, #{format_time(hour[1][0])} – #{format_time(hour[1][1])}"
+        end
+        str << '</br>'
+      end
+      str.html_safe
     end
   end
 
