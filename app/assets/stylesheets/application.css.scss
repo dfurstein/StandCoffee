@@ -79,7 +79,7 @@ body {
   margin-top: 50px;
 }
 
-.centered-pills {  
+.centered-pills {
   text-align: center;
 }
 .centered-pills ul.nav-pills {
@@ -142,14 +142,17 @@ hr {
 
 .column-press-0 {
   padding: 0 30px 20px 0;
+  height: 150px;
 }
 
 .column-press-1 {
   padding: 0 15px 20px 15px;
+  height: 150px;
 }
 
 .column-press-2 {
   padding: 0 0 20px 30px;
+  height: 150px;
 }
 
 .full-row-press {
@@ -173,7 +176,7 @@ body {
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 40px;
-  
+
   color: #ffffff;
   font-size: 0.7em;
   text-align:center;

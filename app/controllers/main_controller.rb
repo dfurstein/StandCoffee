@@ -5,7 +5,7 @@ class MainController < ApplicationController
     @date = Date.today.to_formatted_s(:rfc822).upcase
 
     client = Weatherman::Client.new unit: 'F'
-    response = client.lookup_by_woeid 2459115
+    response = begin client.lookup_by_woeid 2459115 rescue nil end
     @temperature = response.condition['temp'] unless response.nil?
 
     @locations = Location.where(current: true).order(:locale)
