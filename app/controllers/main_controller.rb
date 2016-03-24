@@ -16,7 +16,7 @@ class MainController < ApplicationController
       marker.lat location.latitude
       marker.lng location.longitude
       marker.picture(
-        'url' => 'assets/favicon.ico',
+        'url' => '/assets/favicon-19585d46424de7148c82d6c044b3356c.ico',
         'width' => 48,
         'height' => 48
       )
