@@ -16,6 +16,7 @@
 //= require bootstrap-sprockets
 //= require underscore
 //= require gmaps/google
+//= require markerclusterer-min.js
 //= require_tree .
 
 $(function() {

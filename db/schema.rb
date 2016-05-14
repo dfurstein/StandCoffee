@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150525210103) do
+ActiveRecord::Schema.define(version: 20160514195041) do
 
   create_table "articles", primary_key: "twitter_id", force: true do |t|
     t.string   "site"
@@ -44,6 +44,9 @@ ActiveRecord::Schema.define(version: 20150525210103) do
     t.string   "locale"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.date     "live_on"
   end
 
 end
