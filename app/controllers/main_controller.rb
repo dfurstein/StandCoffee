@@ -9,7 +9,7 @@ class MainController < ApplicationController
     @temperature = response.condition['temp'] unless response.nil?
 
     @current_locations = Location.where(current: true).where('live_on <= ?', Date.today).order(:locale)
-    @future_locations = Location.where(current: true).where('live_on > ?', Date.today).order(:locale)
+    @future_locations = Location.where(current: true).where('live_on > ?', Date.today).order(:live_on)
     @local_locations = @current_locations.where(state: ['NY', 'NJ', 'CT'])
 
     @articles = Article.where(is_active: true).order(published_at: :desc).last(9)
